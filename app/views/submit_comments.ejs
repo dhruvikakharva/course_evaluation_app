@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Insert Comments Page</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
+        
+        label {
+          padding: 12px 12px 12px 0;
+          display: inline-block;
+        }
+        
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          float: right;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        .container {
+          padding: 20px;
+        }
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .heading{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center><img src="img/centennialcollege.png" alt="mongodb"></center>
+    <div class="container">
+    <form action="thankyou" method="POST">
+        <div class="row heading">
+            <h1>Hello <%= student.firstName %> <%= student.lastName %></h1>
+        </div>
+        <div class="row heading">
+            <h2>Submit a comment</h2>
+        </div>
+        <div class="row heading">
+            <div class="col-25">
+                <label>Course Code:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="courseCode" placeholder="Enter your course code"/>
+            </div>
+        </div>
+        <div class="row heading">
+            <div class="col-25">
+                <label>Course Name:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="courseName" placeholder="Enter your course name" />
+            </div>
+        </div>
+        <div class="row heading">
+            <div class="col-25">
+                <label>Program:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="program" placeholder="Enter your program name"/>
+            </div>
+        </div>
+        <div class="row heading">
+            <div class="col-25">
+                <label>Semester:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="semester" placeholder="Enter your current semester"/>
+            </div>
+        </div>
+        <div class="row heading">
+            <div class="col-25">
+                <label>Comments:</label>
+            </div>
+            <div class="col-75">
+                <textarea name="comment" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit" name="submit">
+        </div>
+    </form>
+    </div>
+</body>
+</html>

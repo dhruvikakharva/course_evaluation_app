@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> <%= loginMessage %> </title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        input[type=text],input[type=password], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
+        
+        label {
+          padding: 12px 12px 12px 0;
+          display: inline-block;
+        }
+        
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          float: right;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        .container {
+          padding: 20px;
+          width: 400px;
+          float: center;
+          margin: 0 auto;
+        }
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .heading{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center><img src="img/centennialcollege.png" alt="mongodb"></center>
+    <div class="container">
+        <div class="row heading"><h1><b>Login To Evaluate Course</b></h1></div>
+        <form action="signin" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label>Email:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" size="30" placeholder="Enter your emailId" name="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Password:</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" size="30" placeholder="Enter your password" name="password">
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <input type="submit" value="Login" >
+            </div>
+        </form>
+    </div>
+</body>
+</html>

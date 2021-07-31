@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Comments Page</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/display.css" /> -->
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        label {
+          padding: 12px 12px 12px 0;
+          display: inline-block;
+        }
+        
+        .container {
+          padding: 20px;
+        }
+        table {
+            width:100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        table#t01 th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        h2{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <center><img src="img/centennialcollege.png" alt="mongodb"></center>
+    <!-- Load the static image file  -->
+    <!-- <img src="img/logo.png" alt="Logo"> -->
+    <div class="container">
+        <h2> Comments by <%= email %>, Total Comments : <%= total %> </h2>
+        <table id="t01">
+            <tr>
+                <th> <b>Course Code</b></th>
+                <th> <b>Course Name</b></th>
+                <th> <b>Comment</b> </th>
+            </tr>
+    
+    
+            <% comments.forEach(function(comment){ %>
+    
+            <tr>
+                <td> <%= comment.courseCode %> </td>
+                <td> <%= comment.courseName %> </td>
+                <td> <%= comment.comment %> </td>   
+            </tr>
+    
+            <% })%>
+    
+        </table>
+        <br>
+        <a href="http://localhost:3000"> Main Page</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> <%= loginMessage %> </title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }        
+        .container {
+          padding: 20px;
+          width: 400px;
+          float: center;
+          margin: 0 auto;
+        }
+        /* Clear floats after the columns */
+        .row {
+          float: center;
+        }
+        .button{
+            background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          float: left;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .button:hover{
+            background-color: #45a049;
+        }
+        .link{
+            text-decoration: none;
+        }
+        .heading{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center><img src="img/centennialcollege.png" alt="mongodb"></center>
+    <div class="container">
+        <div class="row heading">
+            <h2>Course Evaluation</h2>
+        </div>
+    
+        <table class="center" >
+            <tr class="row">
+                
+                <td><a class="button link" href="/signup">Sign up as a Student</a></td>
+            </tr>
+            <tr class="row">
+                
+                <td><a class="button link" href="/signin">Sign in as a studnent</a></td>
+            </tr>
+            <tr class="row">
+                <td><a class="button link" href="/display">Display All Students</a></td>
+            </tr>
+            <tr class="row">
+                <td><a class="button link" href="/displayComments">Display Comments by a Student</a></td>
+            </tr>
+    
+        </table>
+    </div>
+    
+</body>
+</html>
